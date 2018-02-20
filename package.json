@@ -1,0 +1,45 @@
+{
+  "name": "preact-widget-boilerplate",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress",
+    "start": "npm run dev",
+    "build": "cross-env NODE_ENV=production webpack -p --progress",
+    "prebuild": "mkdirp build",
+    "test": "jest",
+    "lint": "eslint ./src/",
+    "presize": "npm run build",
+    "size": "gzip-size build/bundle.js"
+  },
+  "license": "MIT",
+  "author": "Max Malm <max@malm.me>",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "7.2.3",
+    "babel-jest": "^22.1.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.14.0",
+    "babel-runtime": "^6.11.6",
+    "cross-env": "^3.1.4",
+    "eslint-config-benjick": "^1.0.1",
+    "gzip-size-cli": "^2.1.0",
+    "jest": "^22.1.4",
+    "mkdirp": "^0.5.1",
+    "replace-bundle-webpack-plugin": "^1.0.0",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  },
+  "dependencies": {
+    "preact": "^8.2.7",
+    "preact-compat": "^3.0.0",
+    "preact-habitat": "^3.0.2",
+    "promise-polyfill": "^7.0.2",
+    "proptypes": "^1.1.0"
+  },
+  "main": "webpack.config.babel.js"
+}
